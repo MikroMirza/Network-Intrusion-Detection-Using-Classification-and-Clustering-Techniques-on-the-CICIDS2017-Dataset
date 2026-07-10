@@ -37,7 +37,7 @@ def load_and_clean(data_path: str, sample_frac: float = 1.0,
             label_col = cand
             break
     if label_col is None:
-        raise KeyError("Could not find a 'Label' column in the dataset.")
+        raise KeyError("Could not find the label column")
     if label_col != "Label":
         df = df.rename(columns={label_col: "Label"})
 
@@ -104,7 +104,7 @@ def balance_classes(X, y, method: str = "undersample",
         from imblearn.over_sampling import SMOTE
         sampler = SMOTE(random_state=random_state)
     else:
-        raise ValueError(f"Unknown balance method: {method}")
+        raise ValueError(f"Unknown method: {method}")
 
     X_res, y_res = sampler.fit_resample(X, y)
     print(f"Balanced classes via {method}: {len(y):,} -> {len(y_res):,} samples")
