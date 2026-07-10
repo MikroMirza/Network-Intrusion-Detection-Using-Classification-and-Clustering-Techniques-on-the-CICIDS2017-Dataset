@@ -1,0 +1,48 @@
+Best model: XGBoost
+Best hyperparameters: {'n_estimators': 200, 'max_depth': 6, 'learning_rate': 0.1}
+
+Classification report:
+                              precision    recall  f1-score   support
+
+                      BENIGN       1.00      1.00      1.00     23922
+                         Bot       0.94      0.98      0.96       351
+                        DDoS       1.00      1.00      1.00      3000
+               DoS GoldenEye       1.00      1.00      1.00      2057
+                    DoS Hulk       1.00      1.00      1.00      3000
+            DoS Slowhttptest       0.99      1.00      1.00      1046
+               DoS slowloris       1.00      0.99      0.99      1077
+                 FTP-Patator       1.00      1.00      1.00      1186
+                  Heartbleed       1.00      1.00      1.00         2
+                Infiltration       1.00      0.33      0.50         6
+                    PortScan       1.00      1.00      1.00      3000
+                 SSH-Patator       1.00      1.00      1.00       644
+  Web Attack � Brute Force       0.73      0.83      0.78       265
+Web Attack � Sql Injection       1.00      0.33      0.50         3
+          Web Attack � XSS       0.43      0.32      0.36       117
+
+                    accuracy                           0.99     39676
+                   macro avg       0.94      0.85      0.87     39676
+                weighted avg       0.99      0.99      0.99     39676
+
+
+Top features:
+act_data_pkt_fwd               0.123785
+PSH Flag Count                 0.090878
+Bwd Packet Length Min          0.086233
+Bwd Packet Length Mean         0.069439
+Active Mean                    0.050682
+Bwd Packet Length Std          0.048375
+Fwd IAT Std                    0.041618
+Total Backward Packets         0.032675
+Bwd Header Length              0.032419
+Fwd Packet Length Mean         0.029784
+Average Packet Size            0.028524
+Total Length of Fwd Packets    0.027651
+Total Length of Bwd Packets    0.027495
+Bwd IAT Min                    0.024454
+Destination Port               0.024100
+Total Fwd Packets              0.019844
+Flow Duration                  0.018004
+Idle Mean                      0.016914
+Min Packet Length              0.014043
+Flow IAT Mean                  0.013089
