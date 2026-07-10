@@ -1,0 +1,5 @@
+                 silhouette  davies_bouldin       ari  n_clusters_found  n_noise
+name                                                                            
+KMeans             0.322942        1.074470  0.197254                14        0
+DBSCAN             0.395924        0.498856 -0.001421                14      102
+GaussianMixture    0.122695        1.531733  0.253366                14        0
