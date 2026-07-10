@@ -146,7 +146,7 @@ def main():
                        os.path.join(args.out_dir, "clusters_gmm.png"))
     cluster_label_crosstab(gmm_labels, y, label_encoder, "gmm", args.out_dir)
 
-    # --- summary ---
+    #summary
     metrics_df = pd.DataFrame(all_metrics).set_index("name")
     print("Summary")
     print(metrics_df.to_string())
