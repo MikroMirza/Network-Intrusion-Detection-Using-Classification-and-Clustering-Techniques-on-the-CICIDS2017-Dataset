@@ -1,0 +1,10 @@
+Summary
+Shape: (39754, 79)
+Dtypes:
+int64      54
+float64    24
+str         1
+Duplicate rows: 18
+
+Columns with missing values:
+  None
